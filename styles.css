@@ -1,0 +1,447 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  -------CSS Reset ends------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+
+:root{
+    --green: #64ffda;
+    --black-light: #133040;
+    --black: #0a192f;
+    --text-color-primary: #8892b0;
+    --text-color-primary-bold: #ccd6f6;
+}
+
+html, body{
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--black);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body *{
+    box-sizing: border-box;
+    color: var(--text-color-primary);
+}
+
+.header{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 3%;
+}
+
+/* ----- nav bar for small screens ---- */
+
+li a {
+    text-decoration : none;
+    color: var(--text-color-primary-bold);
+}
+
+nav {
+    display: none;
+    width: 100%; 
+    background: hsl(216, 65%, 20%);
+    font-family: 'Rubik', sans-serif;
+}
+
+span {
+    padding : 30px;
+    background: hsl(216, 65%, 17%);
+    color: var(--text-color-primary-bold);
+    font-size : 1.2em;
+    cursor : pointer;
+    display: block;
+    text-align: center;
+    width: 100vw;
+}
+
+#resume-li{
+    border: 5px dashed var(--green);
+}
+
+.fa-bars{
+    transform: scale(1.4);
+    padding: 0 20px !important;
+}
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+  z-index: 2;
+}
+
+.slide li {padding : 30px;}
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {height: 315px;} 
+/* ------nav bar ends -------- */
+
+#resume-btn{
+    margin: 0 0 0 2%;
+}
+
+.btn{
+    background: none;
+    border: 2px solid var(--green);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: var(--green);
+    padding: 11px 11px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--black-light);
+}
+
+.header-links{
+    display: inline-block;
+    position: relative;
+    color: var(--text-color-primary-bold);
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.header-links:hover{
+    color: var(--green);
+}
+
+.main-container-class{
+    display: flex;
+    height: calc(100% - 100px);
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+#name-span{
+    word-spacing: 0.6rem;
+    font-size: clamp(14px, 6vw, 18px);
+    color: var(--green);
+}
+
+.heading{
+    font-size: clamp(40px, 8vw, 80px); 
+    font-weight: 600;
+    margin: 20px 0 20px 0;
+}
+
+#name-heading{
+    color: var(--text-color-primary-bold);
+}
+
+#abt-me-heading{
+    color: var(--text-color-primary);
+    margin-top: 0;
+    line-height: clamp(70, 2vw, 120px);
+}
+
+#abt-me-p{
+    padding: 20px 0;
+    width: 55%;
+    font-size: clamp(17px, 2vw, 22px);
+    line-height: 1.4;
+    font-family: 'Roboto Slab', serif;
+}
+
+#projects-btn{
+    margin: 2rem 0 0 0;
+    width: 140px;
+}
+
+.section-container{
+    width: 70%;
+    margin: 0 auto 0 auto;
+    padding: 100px 0;    
+}
+
+.section-heading{
+    font-size: clamp(30px, 3vw, 40px);
+    color: var(--text-color-primary-bold);
+    font-weight: 600;
+    margin: 0 0 50px 0;
+}
+
+.fas, .fab, .far{
+    padding: 0 10px 0 0;
+    color: var(--text-color-primary-bold);
+}
+
+.about-me-container{    
+    display: flex;
+}
+
+#about-me-text{
+    padding: 0 50px 0 0;
+}
+
+.image{
+    width: clamp(300px, 32vw ,400px);
+    border-radius: 10px;
+    position: relative;
+    top: -15px;
+    left: -15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tint{
+    border: 4px solid var(--green);
+    border-radius: 15px;
+}
+
+.image:hover{
+    top: 0;
+    left: 0;
+}
+
+.image:hover > .tint{
+    border: 1px solid black ;
+}
+
+.section-text{
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(15px, 2vw, 20px);
+    line-height: 1.4;
+}
+
+
+
+.project-image{
+    width: clamp(300px, 45vw ,500px);
+    border-radius: 10px;
+}
+
+.project-flex{
+    display: flex;
+    padding-bottom: 90px;
+}
+
+.project-text-flex{
+    padding: 0 0 0 50px;
+    text-align: right;
+}
+
+.project-name{
+    font-size: clamp(25px, 2vw, 30px);
+    color: var(--text-color-primary-bold);
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.project-links{
+    padding: 25px 0;
+}
+
+.project-links a *{
+    transform: scale(1.5);
+    margin-left: 25px;
+    padding-right: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-links *:hover{
+    color: var(--green);
+    transform: scale(1.7);
+}
+
+#contact-heading{
+    text-align: center;
+    font-size: clamp(40px, 8vw, 60px);
+}
+
+#contact-text{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#contact-btn{
+    display: block;
+    margin: 30px auto;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+.contact-icons{
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-links{
+    transform: scale(2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-links:hover{
+    color: var(--green);
+    transform: scale(2.2);
+}
+
+.footer-text{
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-text:hover{
+    color: var(--green);
+}
+
+@media (max-width: 1200px){
+    .section-container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px){
+    .about-me-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-me-text{
+        padding-right: 0;
+    }
+
+    .tint{
+        border: 0;
+    }
+
+    .image{
+        top: 0;
+        left: 0;
+    }
+
+    .image-wrapper{
+        padding-top: 20px; 
+    }
+
+    .project-image{
+        width: 100%;
+    }
+
+    .project-flex{
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .project-text-flex{
+        text-align: left;
+        padding: 20px 0 0 0;
+    }
+
+    .project-links *{
+        margin-left: 0;
+        margin-right: 25px;
+    }
+
+    .contact-icons{
+        width: 70%;
+    }
+}
+
+@media (max-width: 450px){
+    .header{
+        justify-content: center;
+    }
+
+    #abt-me-p{
+        width: 75%;
+    }
+
+    #contact-text{
+        width: 80%;
+    }
+
+    .contact-icons{
+        width: 90%;
+    }
+
+    .header{
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+}
+
+
+
+
+
