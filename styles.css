@@ -275,19 +275,6 @@ nav {
     line-height: 1.4;
 }
 
-ul{
-    margin-top: 30px;
-    display: flex;
-}
-
-li{
-    margin-right: 45px;
-    font-family: 'Roboto Slab', serif;
-    font-size: clamp(15px, 2vw, 20px);
-    color: var(--green);
-    list-style-type: disc;
-}
-
 .project-image{
     width: clamp(300px, 45vw ,500px);
     border-radius: 10px;
