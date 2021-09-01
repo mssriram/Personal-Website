@@ -7,16 +7,17 @@
 <title>Sriram</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./static/icon.png">
 <link rel="stylesheet" href="styles.css">
 <script src="https://kit.fontawesome.com/2f4f41f7c8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="header">
-        <a href="#" class="header-links">About</a>
-        <a href="#" class="header-links">Projects</a>
-        <a href="#" class="header-links">Contact</a>
-        <button class="btn" id="resume-btn">Resume</button>
+        <a href="#about-me" class="header-links">About</a>
+        <a href="#projects" class="header-links">Projects</a>
+        <a href="#contact" class="header-links">Contact</a>
+        <button class="btn" id="resume-btn"><a href="./static/files/Resume.pdf" target="_blank">Resume</a></button>
     </header>
 
     <nav>
@@ -27,7 +28,7 @@
           <li><a href="#about-me">About Me</a></li> 
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li  id="resume-li"><a href="#">Resume</a></li>
+          <li  id="resume-li"><a href="./static/files/Resume.pdf">Resume</a></li>
         </ul>
       
     </nav>
@@ -36,14 +37,19 @@
         <div id="name-span">Hi, my name is</div>
         <h1 id="name-heading" class="heading">M.S.Sriram</h1>
         <h1 id="abt-me-heading" class="heading">I love building websites</h1>
-        <p id="abt-me-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus sit amet orci vel ornare. Nam gravida tristique enim vel condimentum. Etiam eget viverra ipsum. In hac habitasse platea dictumst</p>
-        <button href="#" class="btn" id="projects-btn">Go To Projects</button>
+        <p id="abt-me-p">I'm a passionate and aspiring web developer and I love coding and building things. When I am not studying or coding, I am usually playing football or playing video games.</p>
+        <button class="btn" id="projects-btn"><a href="#projects">Go To Projects</a></button>
     </div>
 
     <div class="section-container" id="about-me">
         <h2 class="section-heading" id="about-me-heading"><i class="fas fa-angle-double-right"></i>About Me</h2>
         <div class="about-me-container">
-            <p class="section-text" id="about-me-text">Labore labore labore est in dolor cillum. Consequat veniam enim voluptate in consectetur magna nulla. Culpa cupidatat tempor magna commodo sunt sit ex aliqua ea fugiat sit elit quis duis.<br><br> Aute ipsum aliquip et incididunt reprehenderit sint minim nisi irure nulla pariatur nisi adipisicing est. Tempor duis qui veniam dolore nulla dolore qui nostrud commodo consectetur. Ex consequat officia excepteur reprehenderit aute dolor. </p>
+            <div class="abt-me-text-container">
+                <p class="section-text" id="about-me-text">I am an aspiring 4th-year student at SASTRA University. My specialization is Electrical and Electronics Engineering(EEE). I am a highly analytical, innovative, and results-focused professional with good technical knowledge in several key areas in the electrical field. I look forward to leveraging this knowledge and hope to grow in my future endeavors.
+
+                    <br><br>&nbsp;&nbsp;&nbsp;I am very passionate about web development and have completed some projects and hope and learn and do a lot more. I am well versed in Javascript, Html, and CSS.
+                </p>
+            </div>
             <div class="image-wrapper">
                 <div class="tint"><img src="./static/sriram-image.jpg" class="image" id="about-me-image"></div>
             </div>
@@ -53,71 +59,70 @@
     <div class="section-container" id="projects"> 
         <h2 class="section-heading" id="projects-heading"><i class="fas fa-angle-double-right"></i>Projects</h2>
         
+        
         <div class="project-flex">
-            <div class="image-wrapper"><img class="project-image" src="./static/messi-tribute.png"></div>
+            <div class="image-wrapper"><img class="project-image" src="./static/yt-downloader.png"></div>
             <div class="project-text-flex">
-                <h3 class="project-name">Tribute Page</h3>
-                <p class="section-text">Simple tribute page made using html and css. Contains some basic headings, images and paragraphs.</p>
+                <h3 class="project-name">Youtube Downloader</h3>
+                <p class="section-text">Youtube Downloader to download youtube videos. Enter youtube link to download videos in 360p, 720p and 1080p. Made using the npm packages ytdl-core and ffmpeg for downloading and merging of audio and video.</p>
                 <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="https://messi-tribute.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/mssriram/Youtube-Downloader" target="_blank"><i class="fab fa-github" target="_blank"></i></a>
+                    <!-- <a href="#"><i class="fas fa-external-link-alt"></i></a> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="project-flex">
+            <div class="image-wrapper"><img class="project-image" src="./static/chatcord.png"></div>
+            <div class="project-text-flex">
+                <h3 class="project-name">Chat Cord</h3>
+                <p class="section-text">Basic chat app which you can use to create different rooms and chat in. Implemented using websockets for the creation of rooms and multiple users.</p>
+                <div class="project-links">
+                    <a href="https://github.com/mssriram/ChatCord" target="_blank"><i class="fab fa-github"></i></a>
                 </div>  
             </div>
         </div>
-
+        
         <div class="project-flex">
-            <div class="image-wrapper"><img class="project-image" src="./static/project-placeholder.jpg"></div>
+            <div class="image-wrapper"><img class="project-image" src="./static/farmstand.png"></div>
             <div class="project-text-flex">
-                <h3 class="project-name">Project Name</h3>
-                <p class="section-text">Commodo excepteur nulla voluptate anim voluptate amet ea exercitation laborum cillum ad magna. Esse consequat enim anim commodo ex anim nisi esse laborum consequat ad est.</p>
+                <h3 class="project-name">Farm Stand</h3>
+                <p class="section-text">Basic CRUD app for a grocery store. You can view, create and delete products from the database. Used MongoDb as the backend database to store product data.</p>
                 <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-flex">
-            <div class="image-wrapper"><img class="project-image" src="./static/project-placeholder.jpg"></div>
-            <div class="project-text-flex">
-                <h3 class="project-name">Project Name</h3>
-                <p class="section-text">Commodo excepteur nulla voluptate anim voluptate amet ea exercitation laborum cillum ad magna. Esse consequat enim anim commodo ex anim nisi esse laborum consequat ad est.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/mssriram/Farmstand" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="project-flex">
-            <div class="image-wrapper"><img class="project-image" src="./static/project-placeholder.jpg"></div>
+            <div class="image-wrapper"><img class="project-image" src="./static/jokes API.png"></div>
             <div class="project-text-flex">
-                <h3 class="project-name">Project Name</h3>
-                <p class="section-text">Commodo excepteur nulla voluptate anim voluptate amet ea exercitation laborum cillum ad magna. Esse consequat enim anim commodo ex anim nisi esse laborum consequat ad est.</p>
+                <h3 class="project-name">Programming Jokes</h3>
+                <p class="section-text">Simple website made using the joke API to display programming jokes.</p>
                 <div class="project-links">
                     <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://programming-jokeapp.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="project-flex" style="padding-bottom:0">
-            <div class="image-wrapper"><img class="project-image" src="./static/project-placeholder.jpg"></div>
+        <div class="project-flex">
+            <div class="image-wrapper"><img class="project-image" src="./static/rockstar.PNG"></div>
             <div class="project-text-flex">
-                <h3 class="project-name">Project Name</h3>
-                <p class="section-text">Commodo excepteur nulla voluptate anim voluptate amet ea exercitation laborum cillum ad magna. Esse consequat enim anim commodo ex anim nisi esse laborum consequat ad est.</p>
+                <h3 class="project-name">Documentation Page</h3>
+                <p class="section-text">Sample documentation page for the Rockstar programming language </p>
                 <div class="project-links">
                     <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://rockstar-docs.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
+
     </div>  
 
     <div class="section-container" id="contact">
         <h2 class="section-heading" id="contact-heading">Get In Touch</h2>
-        <p class="section-text" id="contact-text">Laborum aute pariatur exercitation minim occaecat consequat. Reprehenderit aliqua nostrud officia dolore aliqua commodo mollit velit enim sunt elit veniam nulla dolore. Quis ut enim cillum est dolor et duis nostrud et. </p>
-        <button class="btn" id="contact-btn">Say Hello</button>
+        <p class="section-text" id="contact-text" style="line-height: 1.6em; font-size: 1.4em;">My inbox is always open. You can contact me anytime.</> <br><span class="email" style="color: var(--green); text-align: center;">santhanamsriram07@gmail.com<br>122005137@sastra.ac.in</span></p>
         <div class="contact-icons">
             <a href="https://www.linkedin.com/in/mssriram/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin contact-links"></i></a>
             <a href="mailto:santhanamsriram07@gmail.com" rel="noopener noreferrer" target="_blank"><i class="far fa-envelope contact-links"></i></a>

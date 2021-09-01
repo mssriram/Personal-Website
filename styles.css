@@ -84,6 +84,11 @@ body *{
     padding: 0 3%;
 }
 
+button a{
+    color: var(--green);
+    text-decoration: none;
+}
+
 /* ----- nav bar for small screens ---- */
 
 li a {
@@ -98,7 +103,7 @@ nav {
     font-family: 'Rubik', sans-serif;
 }
 
-span {
+.nav-span {
     padding : 30px;
     background: hsl(216, 65%, 17%);
     color: var(--text-color-primary-bold);
@@ -270,7 +275,18 @@ span {
     line-height: 1.4;
 }
 
+ul{
+    margin-top: 30px;
+    display: flex;
+}
 
+li{
+    margin-right: 45px;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(15px, 2vw, 20px);
+    color: var(--green);
+    list-style-type: disc;
+}
 
 .project-image{
     width: clamp(300px, 45vw ,500px);
@@ -331,7 +347,7 @@ span {
 
 .contact-icons{
     width: 50%;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
@@ -405,9 +421,9 @@ span {
         padding: 20px 0 0 0;
     }
 
-    .project-links *{
+    .project-links a{   
         margin-left: 0;
-        margin-right: 25px;
+        margin-right: 0;
     }
 
     .contact-icons{
@@ -439,8 +455,38 @@ span {
     nav{
         display: block;
     }
+
+    .project-links *{
+        margin-right: 0;
+    }
+
+    .email{
+        display: none;
+    }
 }
 
+
+@media (max-width: 321px){
+    #abt-me-p{
+        width: 100%;
+        padding: 0;
+    }
+
+    #projects-btn{
+        margin-top: 1rem;
+    }
+
+    #name-span{
+        display: block;
+        padding-top: 10px;
+    }
+
+    .main-container-class{
+        transform: scale(0.95);
+    }
+
+    
+}
 
 
 
