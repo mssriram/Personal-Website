@@ -364,7 +364,7 @@ li{
     transform: scale(2.2);
 }
 
-.footer-text{
+.footer-text *{
     display: block;
     text-align: center;
     padding-top: 30px;
@@ -373,7 +373,7 @@ li{
     transition: color 0.2s ease-in-out;
 }
 
-.footer-text:hover{
+.footer-text *:hover{
     color: var(--green);
 }
 
