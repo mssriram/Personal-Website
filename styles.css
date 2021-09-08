@@ -421,7 +421,6 @@ input:-webkit-autofill:active {
 }
 
 /* -------------------- toast --------------------------- */
-
 #snackbar {
     visibility: hidden;
     min-width: 250px;
@@ -463,7 +462,7 @@ input:-webkit-autofill:active {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
-
+    
 /* -------------------- toast --------------------------- */
 
 @media (max-width: 1200px){
