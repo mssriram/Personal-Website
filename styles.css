@@ -223,7 +223,7 @@ nav {
 .section-container{
     width: 70%;
     margin: 0 auto 0 auto;
-    padding: 100px 0;    
+    padding: 50px 0;    
 }
 
 .section-heading{
@@ -364,6 +364,108 @@ nav {
     color: var(--green);
 }
 
+#contact-form{
+    width: 100%;
+}
+
+#contact-form *{
+    width: 60%;
+    display: block;
+    margin: 20px auto;
+    font-family: 'Rubik', sans-serif;
+    border-style: none;
+    outline: none;
+    font-size: 0.95em;
+    /* outline-color: var(--green); */
+}
+
+input{
+    height: 40px;
+    padding: 5px 8px;
+}
+
+#message{
+    padding: 10px;
+    height: 70px;
+}
+
+input[type='text'], input[type="email"], textarea{
+    background-color: hsl(216, 85%, 25%);
+    color: hsl(226, 70%, 98%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: "color 9999s ease-out, background-color 9999s ease-out";
+    transition-delay: 9999s;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: hsl(226, 100%, 78%);
+    opacity: 1; /* Firefox */
+  }
+
+#submit-contact{
+    background-color: #00ffc3d7;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#submit-contact:hover{
+    background-color: #0ceeb9fb
+}
+
+/* -------------------- toast --------------------------- */
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+/* -------------------- toast --------------------------- */
+
 @media (max-width: 1200px){
     .section-container{
         width: 80%;
@@ -445,10 +547,6 @@ nav {
 
     .project-links *{
         margin-right: 0;
-    }
-
-    .email{
-        display: none;
     }
 }
 

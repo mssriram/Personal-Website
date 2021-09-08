@@ -10,6 +10,13 @@
 <link rel="icon" href="./static/icon.png">
 <link rel="stylesheet" href="styles.css">
 <script src="https://kit.fontawesome.com/2f4f41f7c8.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_4oznTscIzwuiQlomZT8fu');
+        })();
+</script>
 </head>
 
 <body>
@@ -122,7 +129,17 @@
 
     <div class="section-container" id="contact">
         <h2 class="section-heading" id="contact-heading">Get In Touch</h2>
-        <p class="section-text" id="contact-text" style="line-height: 1.6em; font-size: 1.4em;">My inbox is always open. You can contact me anytime.</> <br><span class="email" style="color: var(--green); text-align: center;">santhanamsriram07@gmail.com<br>122005137@sastra.ac.in</span></p>
+
+        <form id="contact-form">
+            <label for="from_name"></label>
+            <input type="text" name="from_name" id="from_name" placeholder="Name" required>
+            <label for="from_email"></label>
+            <input type="email" name="from_email" id="from_email" placeholder="Email" required>
+            <label for="message"></label>
+            <textarea name="message" id="message" placeholder="Message" required></textarea>
+            <input type="submit" id="submit-contact" value="Send">
+        </form>
+
         <div class="contact-icons">
             <a href="https://www.linkedin.com/in/mssriram/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin contact-links"></i></a>
             <a href="mailto:santhanamsriram07@gmail.com" rel="noopener noreferrer" target="_blank"><i class="far fa-envelope contact-links"></i></a>
@@ -134,9 +151,10 @@
     <footer class="footer">
         <div class="footer-text"><a href="https://github.com/mssriram/Personal-Website" target="_blank" style="text-decoration: none">Designed and built by Sriram</a></div>
     </footer>
-
     
+    <div id="snackbar">Some text some message..</div>
 
+    <script src="index.js"></script>
 </body>
 
 </html>
