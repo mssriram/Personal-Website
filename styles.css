@@ -223,7 +223,7 @@ nav {
 .section-container{
     width: 70%;
     margin: 0 auto 0 auto;
-    padding: 50px 0;    
+    padding: 100px 0 60px 0;    
 }
 
 .section-heading{
@@ -413,7 +413,7 @@ input:-webkit-autofill:active {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #submit-contact:hover{
@@ -462,7 +462,7 @@ input:-webkit-autofill:active {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
-    
+
 /* -------------------- toast --------------------------- */
 
 @media (max-width: 1200px){
@@ -517,6 +517,10 @@ input:-webkit-autofill:active {
     .contact-icons{
         width: 70%;
     }
+
+    #contact-form *{
+        width: 80%;
+    }
 }
 
 @media (max-width: 450px){
@@ -547,6 +551,9 @@ input:-webkit-autofill:active {
     .project-links *{
         margin-right: 0;
     }
+    #contact-form *{
+        width: 90%;
+    }
 }
 
 
@@ -569,6 +576,9 @@ input:-webkit-autofill:active {
         transform: scale(0.95);
     }
 
+    #contact-form *{
+        width: 99%;
+    }
     
 }
 
