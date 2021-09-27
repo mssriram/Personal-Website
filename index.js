@@ -13,6 +13,13 @@ window.onload = function() {
                 displayToast("Failed");
             });
     });
+
+    document.getElementById('email').addEventListener('click', (event) => {
+        const text = "Email id copied to clipboard";
+        const email = "santhanamsriram07@gmail.com"
+        navigator.clipboard.writeText(email);
+        displayToast(text);
+    })
 }
 
 function displayToast(text) {
